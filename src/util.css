@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+body{
+    @apply bg-zinc-950;
+}
+
+* {
+    @apply box-border text-zinc-50;
+}
+
+.page-container{
+    @apply block p-10 mx-auto my-16 w-[80rem];
+}
+
+h1 {
+    @apply text-5xl font-bold font-sans;
+}
+
+h2 {
+    @apply text-3xl font-semibold font-sans mb-2;
+}
+
+.navigation {
+    @apply block mb-6 w-fit;
+}
+
+.navigation a {
+    @apply inline-block font-semibold transition-all px-3 py-2 text-zinc-300 hover:text-zinc-100 rounded-md;
+}
+
+.navigation .active {
+    @apply -translate-y-1 text-zinc-100;
+}
+
+.image {
+    @apply block w-64 aspect-square rounded-2xl object-cover ml-4;
+}
+
+.section-split{
+    @apply flex w-full justify-between mt-5 items-start max-w-[70rem];
+}
+
+.sub-section{
+    @apply text-justify mb-2;
+}
+
+.projects{
+    @apply flex mt-14 gap-3;
+}
+
+.project {
+    @apply block w-96 px-4 py-5 border border-zinc-50/20 bg-gradient-to-br shadow-xl hover:shadow-zinc-50/5 from-zinc-900 to-zinc-950 transform rounded-xl transition-all;
+}
+
+.project:hover .cover {
+    @apply shadow-lg -translate-y-3;
+}
+
+.project .cover{
+    @apply rounded mb-3 object-contain transition-all -mt-10;
+}
+
+.project .name {
+    @apply block font-semibold text-lg mb-1;
+}
+
+.project .description {
+    @apply block text-justify text-sm;
+}
+
+.button {
+    @apply inline-block my-2 px-3 py-2 bg-zinc-900 rounded;
+}
+
+.small-button {
+    @apply inline-block my-2;
+}
+
+.project-view{
+    @apply block mt-3;
+}
+
+.project-view .name {
+    @apply block mb-3 font-bold text-3xl;
+}
+
+.project-view .description {
+    @apply block mb-8;
+}
+
+.project-view .cover{
+    @apply block mb-4 h-48 object-cover w-full rounded animate-[project-view-cover-swoosh_9s_ease-in-out_infinite_alternate];
+}
+
+.project-view-section{
+    @apply block mb-8;
+}
+
+.section-title{
+    @apply block mb-3 font-semibold text-2xl
+}
+
+.feature {
+    @apply block p-3 rounded border border-zinc-50/10 mb-3
+}
+
+.contribution-images{
+    @apply block mt-3;
+}
+
+.contribution-image{
+    @apply inline-block h-48 rounded object-contain;
+}
+
+
+@keyframes project-view-cover-swoosh{
+    from {
+        @apply object-top;
+    }
+    to {
+        @apply object-bottom;
+    }
+}
